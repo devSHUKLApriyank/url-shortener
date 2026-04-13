@@ -18,9 +18,7 @@ export const registerUser = async (req, res) => {
 export const loginUser = async (req, res) => {
     try {
         const { email, password } = req.body;
-        console.log('Login attempt:', { email, password })
         const token = await loginUserService(email, password);
-        console.log('Setting cookie and sending response...') 
         res.cookie('accesstoken', token, cookiesOptions); 
         res.status(200).json({ message: "User logged in successfully" });
     } catch (error) {
