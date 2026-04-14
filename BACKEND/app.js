@@ -9,7 +9,7 @@ import { errorHandler } from './src/middleware/errorHandler.js';
 import cookieParser from 'cookie-parser';
 
 const app = express();
-app.use(cors({ origin: ['http://localhost:5173', 'https://your-app.vercel.app'] ,
+app.use(cors({ origin: ['http://localhost:5173', 'https://url-shortener-pi-black.vercel.app'] ,
     credentials: true
 })); 
 app.use(express.json());
